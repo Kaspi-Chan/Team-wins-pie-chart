@@ -42,3 +42,12 @@ section {
 .hist-img img {
   max-width: 25px;
 }
+
+.hist-main > div {
+  border: 1px solid black;
+}
+
+.hist-main {
+  display: flex;
+  justify-content: center;
+}
