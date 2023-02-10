@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(224, 224, 224);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  min-width: 800px;
+  min-height: 500px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.histogram {
+  min-width: 30em;
+  background-color: white;
+}
+.hist-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hist-heading h2 {
+  font-size: 1.4em;
+}
+.hist-img {
+  min-width: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 0.3em 1em;
+  background-color: rgb(224, 224, 224);
+  border-radius: 0 25px 25px 0;
+}
+.hist-img:last-of-type {
+  justify-content: flex-start;
+  border-radius: 25px 0 0 25px;
+}
+.hist-img img {
+  max-width: 25px;
+}

@@ -1,57 +1,61 @@
-:root{
-    /* Team wins (number) */
-    --first-team-w: 13;
-    --second-team-w: 14;
-    --third-team-w: 9;
-    /* Total wins sum */
-    --total-sum-w: calc(var(--first-team-w) + var(--second-team-w) + var(--third-team-w));
-    /* Getting the % of wins (formula) */
-    --first-team:(var(--first-team-w) / var(--total-sum-w) * 100);
-    --second-team:(var(--second-team-w) / var(--total-sum-w) * 100);
-    /* Team colors */
-    --first-team-clr: red;
-    --second-team-clr: cyan;
-    --third-team-clr: black;
+:root {
+  /* Team wins (number) */
+  --first-team-w: 13;
+  --second-team-w: 14;
+  --third-team-w: 9;
+  /* Total wins sum */
+  --total-sum-w: calc(
+    var(--first-team-w) + var(--second-team-w) + var(--third-team-w)
+  );
+  /* Getting the % of wins (formula) */
+  --first-team: (var(--first-team-w) / var(--total-sum-w) * 100);
+  --second-team: (var(--second-team-w) / var(--total-sum-w) * 100);
+  /* Team colors */
+  --first-team-clr: red;
+  --second-team-clr: cyan;
+  --third-team-clr: black;
 }
-body{
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: 100vh;
+body {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100vh;
 }
-.chart{
-    min-width: 500px;
-    min-height: 500px;
-    border-radius: 50%;
-    background-color: cyan;
-    margin: 5em;
-    background: repeating-conic-gradient(
-        from 0deg,
-        var(--first-team-clr) 0deg calc(3.6deg * var(--first-team)),
-        var(--second-team-clr) calc(3.6deg * var(--first-team)) calc(3.6deg * (var(--first-team) + var(--second-team))),
-        var(--third-team-clr) calc(3.6deg * (var(--first-team) + var(--second-team))) calc(3.6deg * 100)
-    );
-    /* background: repeating-conic-gradient(
+.chart {
+  min-width: 500px;
+  min-height: 500px;
+  border-radius: 50%;
+  background-color: cyan;
+  margin: 5em;
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--first-team-clr) 0deg calc(3.6deg * var(--first-team)),
+    var(--second-team-clr) calc(3.6deg * var(--first-team))
+      calc(3.6deg * (var(--first-team) + var(--second-team))),
+    var(--third-team-clr)
+      calc(3.6deg * (var(--first-team) + var(--second-team))) calc(3.6deg * 100)
+  );
+  /* background: repeating-conic-gradient(
         from 0deg,
         red 0deg calc(3.6deg * 36.1),
         cyan calc(3.6deg * 36.1) calc(3.6deg * (36.1 + 38.9)),
         black calc(3.6deg * (36.1 + 38.9)) calc(3.6deg * 100)); */
 }
-.chart-info{
-    font-size: 1.5em;
-    font-weight: bold;
+.chart-info {
+  font-size: 1.5em;
+  font-weight: bold;
 }
-h1{
-    color: white;
+h1 {
+  color: white;
 }
-.chart-info>p:nth-of-type(1){
-    color: var(--first-team-clr);
+.chart-info > p:nth-of-type(1) {
+  color: var(--first-team-clr);
 }
-.chart-info>p:nth-of-type(2) {
-    color: var(--second-team-clr);
+.chart-info > p:nth-of-type(2) {
+  color: var(--second-team-clr);
 }
-.chart-info>p:nth-of-type(3) {
-    color: var(--third-team-clr);
+.chart-info > p:nth-of-type(3) {
+  color: var(--third-team-clr);
 }
