@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: rgb(224, 224, 224);
   height: 100vh;
@@ -50,4 +53,58 @@ section {
 .hist-main {
   display: flex;
   justify-content: center;
+  gap: 0.5em;
+}
+.hist-main-content {
+  background: repeating-linear-gradient(
+    90deg,
+    white 0 calc((100% - 12 * 2px) / 12),
+    rgba(128, 128, 128, 0.136) 0 calc((100% - 12 * 2px) / 12 + 3px)
+  );
+  min-width: 400px;
+}
+.hist-main-status > p,
+.hist-main-element {
+  margin: 0.5em 0;
+}
+.hist-main-status {
+  font-weight: bold;
+}
+.hist-main-element {
+  padding: 0.1em 0;
+}
+.conceded {
+  background-color: red;
+  color: white;
+}
+.scored {
+  background-color: black;
+  color: white;
+}
+.conceded-all {
+  width: calc(47.91% + 35px);
+}
+.conceded-home {
+  width: calc(64.1% + 35px);
+}
+.conceded-away {
+  width: calc(35.09% + 35px);
+}
+.scored-all {
+  width: calc(47.91% + 35px);
+}
+.scored-home {
+  width: calc(64.1% + 35px);
+}
+.scored-away {
+  width: calc(16.09% + 35px);
+}
+.hist-main-time-marks {
+  position: relative;
+  top: 1.5em;
+  left: 2em;
+  font-size: 0.8em;
+}
+.hist-main-time-marks > span {
+  margin-right: 0.2em;
 }
