@@ -18,11 +18,13 @@ section {
 .histogram {
   min-width: 30em;
   background-color: white;
+  border-radius: 5px;
 }
 .hist-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5em;
 }
 .hist-heading h2 {
   font-size: 1.4em;
@@ -73,6 +75,9 @@ section {
   margin: 0 0 0.5em;
   padding: 0.1em 0;
 }
+.hist-main-element {
+  text-align: right;
+}
 .hist-main-status {
   font-weight: bold;
 }
@@ -112,4 +117,28 @@ section {
 }
 .small-font {
   font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.667);
+}
+.hist-legend {
+  display: flex;
+  margin-top: 2em;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.hist-legend > p {
+  margin-left: 5em;
+}
+.legend-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 0.4em;
+}
+.legend-box span:first-of-type {
+  margin-right: 1em;
+}
+.legend-box {
+  display: flex;
+  margin-right: 2em;
 }
