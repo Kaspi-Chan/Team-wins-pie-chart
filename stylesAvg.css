@@ -11,7 +11,6 @@ body {
 section {
   min-width: 800px;
   min-height: 500px;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,32 +45,36 @@ section {
   max-width: 25px;
 }
 
-.hist-main > div {
-  border: 1px solid black;
-}
-
 .hist-main {
   display: flex;
   justify-content: center;
-  gap: 0.5em;
+  gap: 0.7em;
 }
 .hist-main-content {
   background: repeating-linear-gradient(
     90deg,
-    white 0 calc((100% - 12 * 2px) / 12),
-    rgba(128, 128, 128, 0.136) 0 calc((100% - 12 * 2px) / 12 + 3px)
+    white,
+    white calc(100% / 12.5),
+    rgba(128, 128, 128, 0.136) calc(100% / 13 + 5px)
   );
-  min-width: 400px;
+  min-width: 385px;
+  max-height: 183px;
+  border-left: 1px solid black;
+}
+.border-bottom {
+  width: 99%;
+  float: left;
+  height: 1px;
+  margin: 0;
+  background-color: black;
 }
 .hist-main-status > p,
 .hist-main-element {
-  margin: 0.5em 0;
+  margin: 0 0 0.5em;
+  padding: 0.1em 0;
 }
 .hist-main-status {
   font-weight: bold;
-}
-.hist-main-element {
-  padding: 0.1em 0;
 }
 .conceded {
   background-color: red;
@@ -82,29 +85,31 @@ section {
   color: white;
 }
 .conceded-all {
-  width: calc(47.91% + 35px);
+  width: 47.91%;
 }
 .conceded-home {
-  width: calc(64.1% + 35px);
+  width: 64.1%;
 }
 .conceded-away {
-  width: calc(35.09% + 35px);
+  width: 35.09%;
 }
 .scored-all {
-  width: calc(47.91% + 35px);
+  width: 47.91%;
 }
 .scored-home {
-  width: calc(64.1% + 35px);
+  width: 64.1%;
 }
 .scored-away {
-  width: calc(16.09% + 35px);
+  width: 16.09%;
 }
 .hist-main-time-marks {
   position: relative;
-  top: 1.5em;
-  left: 2em;
-  font-size: 0.8em;
+  top: 0.2em;
+  left: -0.5em;
 }
 .hist-main-time-marks > span {
   margin-right: 0.2em;
+}
+.small-font {
+  font-size: 0.8em;
 }
