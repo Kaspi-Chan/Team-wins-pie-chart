@@ -70,7 +70,7 @@ section {
     rgba(128, 128, 128, 0.136) calc(100% / 13 + 5px)
   );
   min-width: 385px;
-  max-height: 183px;
+  max-height: 176px;
   border-left: 1px solid black;
 }
 .border-bottom {
